@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mubashar Ali - Portfolio</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Animate on Scroll Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #000;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    /* ===== HERO SECTION ===== */
+    header {
+      height: 90vh;
+      background: linear-gradient(to right, #000000, #1e1e1e);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 50px;
+      font-weight: 600;
+    }
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #00bfff;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #0099cc;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #000;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #00bfff;
+      display: block;
+      margin: 10px auto;
+    }
+
+    /* ===== ABOUT ===== */
+    #about img {
+      display: block;
+      margin: 20px auto;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00bfff;
+    }
+    #about p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* ===== SKILLS ===== */
+    .skill-bar {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .skill-fill {
+      background: #00bfff;
+      height: 20px;
+      line-height: 20px;
+      color: #fff;
+      text-align: right;
+      padding-right: 10px;
+      border-radius: 20px;
+      width: 0;
+      transition: width 2s ease;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 300px;
+      margin: 15px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== EDUCATION ===== */
+    .education {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .edu-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-info {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+      header p {
+        font-size: 16px;
+      }
+      nav a {
+        font-size: 16px;
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<header>
+  <h1 data-aos="fade-down">MUBASHAR ALI</h1>
+  <p data-aos="fade-up">BSCS Student | Game Developer | Web Designer | AI Creator</p>
+  <a href="#projects" class="btn" data-aos="zoom-in">View My Work</a>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <h2>About Me</h2>
+  <img src="images/mubashar.jpg" alt="Mubashar Ali" data-aos="fade-up">
+  <p data-aos="fade-up">
+    I am Mubashar Ali, a BSCS student with a strong background in Computer Science. 
+    Skilled in game development, chatbot creation, and web design using HTML and CSS, 
+    I am passionate about building innovative digital solutions.
+  </p>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div data-aos="fade-right">
+    <div class="skill-bar"><div class="skill-fill" style="width:90%;">C++ - 90%</div></div>
+    <div class="skill-bar"><div class="skill-fill" style="width:85%;">HTML/CSS - 85%</div></div>
+    <div class="skill-bar"><div class="skill-fill" style="width:80%;">Game Development - 80%</div></div>
+    <div class="skill-bar"><div class="skill-fill" style="width:75%;">Chatbot Creation - 75%</div></div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="card" data-aos="zoom-in">
+      <img src="images/game1.png" alt="Game Project">
+      <h3>2D & 3D Game Development</h3>
+      <p>Developed engaging games with smooth user experience and fun gameplay.</p>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="images/jervis.png" alt="Jarvis Project">
+      <h3>Jarvis AI Assistant</h3>
+      <p>Created a voice-controlled assistant capable of real-time PC control.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="education">
+    <div class="edu-card" data-aos="fade-up">
+      <h3>BSCS</h3>
+      <p>University of Sargodha<br>2024 - 2028</p>
+    </div>
+    <div class="edu-card" data-aos="fade-up">
+      <h3>ICS</h3>
+      <p>Superior Group of College<br>2020 - 2022</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-info" data-aos="fade-up">
+    <p>Email: mubasharchadhar626@gmail.com</p>
+    <p>Phone: +92 328 1167058</p>
+    <p>Address: Post office LKS, Tehsil Kotmomin, District Sargodha</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>&copy; 2025 Mubashar Ali - Portfolio</p>
+</footer>
+
+<!-- AOS Library Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // Animation speed
+    once: true       // Run animation only once
+  });
+
+  // Animate skills when scrolled into view
+  window.addEventListener('scroll', function() {
+    const skills = document.querySelectorAll('.skill-fill');
+    skills.forEach(skill => {
+      const rect = skill.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        skill.style.width = skill.getAttribute('style').split(':')[1];
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
